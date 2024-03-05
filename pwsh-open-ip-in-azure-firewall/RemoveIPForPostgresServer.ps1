@@ -36,9 +36,9 @@ Write-Host "Getting Access Token ..."
 $accessToken = Get-AzureAccessToken
 
 $url = "https://management.azure.com/subscriptions/" + [System.Web.HttpUtility]::UrlEncode($postgresSettings.Subscription) `
-    + "/resourceGroups/"+ [System.Web.HttpUtility]::UrlEncode($postgresSettings.ResourceGroup) `
-    + "/providers/Microsoft.DBforPostgreSQL/flexibleServers/"+ [System.Web.HttpUtility]::UrlEncode($postgresSettings.Server) `
-    + "/firewallRules/"+[System.Web.HttpUtility]::UrlEncode($postgresSettings.Rule)+"?api-version=2022-12-01"
+    + "/resourceGroups/" + [System.Web.HttpUtility]::UrlEncode($postgresSettings.ResourceGroup) `
+    + "/providers/Microsoft.DBforPostgreSQL/flexibleServers/" + [System.Web.HttpUtility]::UrlEncode($postgresSettings.Server) `
+    + "/firewallRules/" + [System.Web.HttpUtility]::UrlEncode($postgresSettings.Rule)+"?api-version=2022-12-01"
 
 $headers = @{
     "Authorization" = "Bearer $($accessToken)"
