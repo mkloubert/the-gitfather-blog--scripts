@@ -168,7 +168,7 @@ function Get-PostgresSettings {
     return @{
         ResourceGroup = $resourceGroup
         Rule = $ruleName
-        Subscription = $subscriptionId
         Server = $serverName
+        Subscription = $subscriptionId
     }
 }

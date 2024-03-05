@@ -41,8 +41,8 @@ $url = "https://management.azure.com/subscriptions/" + [System.Web.HttpUtility]:
     + "/firewallRules/"+[System.Web.HttpUtility]::UrlEncode($postgresSettings.Rule)+"?api-version=2022-12-01"
 
 $headers = @{
+    "Authorization" = "Bearer $($accessToken)"
     "Content-Type" = "application/json"
-    "Authorization" = "Bearer " + $accessToken
 }
 
 Write-Host "Removing rule $($postgresSettings.Rule) for server $($postgresSettings.Server) of group $($postgresSettings.ResourceGroup) ..."
