@@ -121,7 +121,7 @@ function Get-MyIP {
 function Get-PostgresSettings {
     <#
         .SYNOPSIS
-            Scans for current public IP.
+            Returns PostgreSQL settings.
 
         .PARAMETER CMDArgs
             List of command line arguments
